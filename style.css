@@ -28,7 +28,7 @@ body {
     left: 15em;
     width: 10em;
     height: 10em;
-    background-color: #FDB813;
+    background-image: radial-gradient(circle, #FFD700, #FFA500, #FF4500);
     border-radius: 50%;
     position: absolute;
     animation: sun 10s linear infinite;
@@ -40,7 +40,8 @@ body {
 .venus,
 .earth,
 .moon,
-.mars
+.mars,
+.jupiter
  {
     position: absolute;
     border-style: solid;
@@ -89,13 +90,23 @@ body {
     animation: orbit 68.7s linear infinite;
 
 }
+.jupiter{
+    bottom: -10vh;
+    left: -12.0em;
+    width: 67em;
+    height: 67em;
+    padding-right:70px ;
+    animation: orbit 130.3s linear infinite;
+
+}
 
 
 .mercury::before,
 .venus::before,
 .earth::before,
 .moon::before,
-.mars::before {
+.mars::before,
+.jupiter::before {
     content: '';
     position: absolute;
     border-radius: 50%;
@@ -106,7 +117,7 @@ body {
     right: 1.0em;
     width: 2em;
     height: 2em;
-    background-image: linear-gradient(silver, #E6E4E4);
+    background-image: radial-gradient(circle,silver, #E6E4E4);
 }
 
 .venus::before {
@@ -114,7 +125,7 @@ body {
     right: 3em;
     width: 2.7em;
     height: 2.7em;
-    background-image: linear-gradient(rgb(238, 208, 83), rgb(165, 124, 27), rgb(193, 143, 23), rgb(227, 158, 28), rgb(249, 194, 26), rgb(231, 213, 32)); 
+    background-image: radial-gradient(circle,rgb(238, 208, 83), rgb(165, 124, 27), rgb(193, 143, 23), rgb(227, 158, 28), rgb(249, 194, 26), rgb(231, 213, 32)); 
 } 
 
 .earth::before {
@@ -122,7 +133,7 @@ body {
     right: 3.7em;
     width: 4em;
     height: 4em;
-    background-image: linear-gradient(blue, green);
+    background-image: linear-gradient(to bottom, blue, green);
 }
 
 .moon::before {
@@ -137,7 +148,15 @@ body {
     right: 4.6em;
     width: 5.7em;
     height: 5.7em;
-    background-image: linear-gradient(red, orange);
+    background-image:radial-gradient(circle, #FF5733, #FF8C40);
+}
+
+.jupiter::before{
+    top: 9.0em;
+    right: 5.6em;
+    width: 5.7em;
+    height: 5.7em;
+    background-image: radial-gradient(circle, #E2734E, #CB6D51, #A45A4E, #74333A, #361D15);
 }
 @keyframes orbit {
     to {
