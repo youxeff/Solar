@@ -5,14 +5,19 @@
     <title> Solar system!</title>
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4341/4341052.png" sizes="192x192">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat&family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--        <div class = "header">-->
+
 
     <div>
         <div id="head">
-            <h1> Solar system</h1>
+            <header id="solar">Solar System</header>
         </div>
         <div class="container">
             <div class="sun"></div>
@@ -24,8 +29,63 @@
             <div class="mars"></div>
             <div class="jupiter"></div>
         </div>
-        
+
     </div>
 </body>
 
+<script>
+    const sun = document.querySelector('.sun');
+    const mercury = document.querySelector('.mercury');
+    const venus = document.querySelector('.venus');
+    const earth = document.querySelector('.earth');
+    const mars = document.querySelector('.mars');
+    const jupiter = document.querySelector('.jupiter');
+    const moon = document.querySelector('.moon');
+
+    const tl = new TimelineMax();
+
+    tl.fromTo(sun, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(mercury, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(venus, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(earth, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(mars, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(jupiter, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    }).fromTo(moon, 1, {
+        y: -100,
+        opacity: 0
+    }, {
+        y: 0,
+        opacity: 1
+    });
+</script>
 </html>
